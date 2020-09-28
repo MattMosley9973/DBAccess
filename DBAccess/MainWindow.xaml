@@ -5,8 +5,14 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DBAccess"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Access Database" Height="450" Width="800" Loaded="Window_Loaded">
+    <Window.Resources>
+        <local:Access_DBs x:Key="access_DBs"/>
+        <CollectionViewSource x:Key="assetsViewSource" Source="{Binding Assets, Source={StaticResource access_DBs}}"/>
+    </Window.Resources>
     <Grid>
-        
+        <Button Content="See Assets" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="10,49,0,0" Click="Button_Click"/>
+        <TextBlock x:Name="AssetsData" HorizontalAlignment="Left" TextWrapping="Wrap" Text="Assets Data" VerticalAlignment="Top" Margin="112,49,0,0" Height="272" Width="518" Foreground="White" Background="Black"/>
+        <Button Content="Employees" HorizontalAlignment="Left" VerticalAlignment="Top" Width="75" Margin="10,80,0,0" Click="Button_Click_1"/>
     </Grid>
 </Window>

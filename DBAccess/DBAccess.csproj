@@ -59,6 +59,16 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Compile Include="Access_DBs.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Access_DBs.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Access_DBsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Access_DBsDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -86,6 +96,28 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="Access_DBs.xsc">
+      <DependentUpon>Access_DBs.xsd</DependentUpon>
+    </None>
+    <None Include="Access_DBs.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Access_DBs.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Access_DBs.xss">
+      <DependentUpon>Access_DBs.xsd</DependentUpon>
+    </None>
+    <None Include="Access_DBsDataSet.xsc">
+      <DependentUpon>Access_DBsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Access_DBsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Access_DBsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Access_DBsDataSet.xss">
+      <DependentUpon>Access_DBsDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -93,6 +125,11 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Access DBs.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
